@@ -31,14 +31,14 @@ body { padding: 0; margin: 0 }
 }
 
 #unity-progress-bar-empty { 
-  width: 65vw; 
-  height: 24vh;
+   width: 73vw;
+  height: 7.6vh;
  
 }
 
 #unity-progress-bar-empty  span { 
    font-family: signpainter;
-  font-size: 60px;
+  font-size: 100%;
  -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
   
