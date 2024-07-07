@@ -149,7 +149,7 @@
                       clearInterval(animation);
                     }
                 var percentage = progress * 100;
-                return progressBarFull.style.backgroundImage = `-webkit-linear-gradient(right, white, white ${percentage}%, ${color} ${percentage}%)`;
+                progressBarFull.style.backgroundImage = `-webkit-linear-gradient(right, white, white ${percentage}%, ${color} ${percentage}%)`;
   }, 1000 / fps);
                     
     percentage = (1 - frame / totalFrames) * 100;
