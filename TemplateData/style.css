@@ -1,3 +1,8 @@
+@font-face {
+  font-family: signpainter;
+  src: url('SIGNPAINTER.TTF');
+}
+
 body { padding: 0; margin: 0 }
 #unity-container { position: absolute }
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
@@ -18,23 +23,24 @@ body { padding: 0; margin: 0 }
   height: 35vh; 
   background: url('unity-logo-dark.png') no-repeat center;
   background-size: contain;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  
 }
 
 #unity-progress-bar-empty { 
   width: 65vw; 
-  height: 24vh; 
-  margin-top: 10px; 
-  margin-left: 6.5px; 
-  background: url('progress-bar-empty-dark.png') no-repeat center;
-  background-size: contain;
+  height: 24vh;
+  margin-top:10px;
+ 
 }
 
 #unity-progress-bar-full { 
-  width: 0%; 
-  height: 24vh; 
-  margin-top: 10px; 
-  background: url('progress-bar-full-dark.png') no-repeat center;
-  background-size: contain;
+ font-family: signpainter;
+  font-size: 73vw;
+  color: white;
+  
 }
 #unity-footer { position: relative }
 .unity-mobile #unity-footer { display: none }
