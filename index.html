@@ -26,18 +26,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-    <script>var completedChallenge = function () {
-            console.log("Challenge Completed GA Called");
-            gtag('event', 'Completed_Challenge', {
-                'challenge_name': 'MathMagic'
-            });
-        }
+    <script>
 
         function startedChallenge(eventName) {
 
             gtag('event', eventName, {
-                //console.log("startedChallenge");
-                'challenge_name': 'MathMagic'
+                'game_name': 'ZupeeLudo'
             });
         }
 
@@ -49,7 +43,7 @@
         <div id="unity-loading-bar">
             <div id="unity-logo"></div>
             <div id="unity-progress-bar-empty">
-                 <span>Loading Your Ludo Experience&hellip;</span>
+                 <span>Loading Your Ludo Experience...</span>
             </div>
         </div>
         <div id="unity-warning"> </div>
