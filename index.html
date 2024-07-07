@@ -142,8 +142,6 @@
                 var color = "#fde20c";
                 var percentage = 100 * (1 - progress);
                 progressBarFull.style.backgroundImage = `-webkit-linear-gradient(right, white, white ${percentage}%, ${color} ${percentage}%)`;
-                    
-    percentage = (1 - frame / totalFrames) * 100;
             }).then((unityInstance) => {
                 gameInstance = unityInstance;
                 loadingBar.style.display = "none";
