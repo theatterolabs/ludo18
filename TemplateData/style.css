@@ -23,9 +23,10 @@ body { padding: 0; margin: 0 }
   height: 35vh; 
   background: url('unity-logo-dark.png') no-repeat center;
   background-size: contain;
-  position: absolute;
+  position: relative;
   top: 50%;
-  transform: translate(0%, -50%);
+  left:50%
+  transform: translate(50%, -50%);
   
 }
 
@@ -37,7 +38,7 @@ body { padding: 0; margin: 0 }
 
 #unity-progress-bar-full { 
  font-family: signpainter;
-  font-size: 100%;
+  font-size: 100vw;
    -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(white, .8);
   
