@@ -48,7 +48,7 @@
         <div id="unity-loading-bar">
             <div id="unity-logo"></div>
             <div id="unity-progress-bar-empty">
-                 <span id="load">Loading&hellip;</span>
+                 <span id="unity-progress-bar-full">Loading Your Ludo Experience&hellip;</span>
             </div>
         </div>
         <div id="unity-warning"> </div>
@@ -137,7 +137,22 @@
         script.src = loaderUrl;
         script.onload = () => {
             createUnityInstance(canvas, config, (progress) => {
-                progressBarFull.style.width = 100 * progress + "%";
+                // progressBarFull.style.width = 100 * progress + "%";
+                var color = "#1785e6";
+                var frame = 0;
+                var fps = 60;
+                var length = 5; // seconds
+                var totalFrames = fps * length;
+                var animation = setInterval(function() {
+                    var percentage;
+                    if (++frame >= totalFrames) {
+                      clearInterval(animation);
+                    }
+                var percentage = progress * 100;
+                return progressBarFull.style.backgroundImage = `-webkit-linear-gradient(right, white, white ${percentage}%, ${color} ${percentage}%)`;
+  }, 1000 / fps);
+                    
+    percentage = (1 - frame / totalFrames) * 100;
             }).then((unityInstance) => {
                 gameInstance = unityInstance;
                 loadingBar.style.display = "none";
