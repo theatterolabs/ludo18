@@ -139,17 +139,9 @@
         script.onload = () => {
             createUnityInstance(canvas, config, (progress) => {
                 // progressBarFull.style.width = 100 * progress + "%";
-                var animation, color, fps, frame, horizontal, length, totalFrames;
-                color = "#fde20c";
-                frame = 0;
-                fps = 60;
-                length = 5; // seconds
-                totalFrames = fps * length;
-                animation = setInterval(function() {
-                    var percentage;
-                   percentage = 100 * (1 - progress);
+                var color = "#fde20c";
+                var percentage = 100 * (1 - progress);
                 progressBarFull.style.backgroundImage = `-webkit-linear-gradient(right, white, white ${percentage}%, ${color} ${percentage}%)`;
-  }, 1000 / fps);
                     
     percentage = (1 - frame / totalFrames) * 100;
             }).then((unityInstance) => {
