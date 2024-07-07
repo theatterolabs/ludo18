@@ -32,14 +32,14 @@ body { padding: 0; margin: 0 }
 #unity-progress-bar-empty { 
   width: 65vw; 
   height: 24vh;
-  margin-top:10px;
  
 }
 
 #unity-progress-bar-full { 
  font-family: signpainter;
   font-size: 73vw;
-  color: white;
+   -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(white, .8);
   
 }
 #unity-footer { position: relative }
